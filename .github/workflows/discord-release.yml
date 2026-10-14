@@ -28,7 +28,7 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
           username: "Release Bot"
-          content: "A new launcher is out: **${{ github.event.release.name || github.event.release.tag_name }}**"
+          content: "A new game version is out: **${{ github.event.release.name || github.event.release.tag_name }}**"
           embed-title: ${{ github.event.release.name || github.event.release.tag_name }}
           embed-url: ${{ github.event.release.html_url }}
           embed-description: ${{ steps.notes.outputs.body }}
